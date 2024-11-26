@@ -1,7 +1,7 @@
 {
-  "name": "singleton",
+  "name": "ts-design-patterns",
   "version": "1.0.0",
-  "description": "Example Singleton implementation",
+  "description": "Examples of design patterns implementations in TypeScript",
   "main": "src/index.ts",
   "scripts": {
     "test": "jest"
