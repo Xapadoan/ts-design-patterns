@@ -1,22 +1,22 @@
-interface Weapon {
+export interface Weapon {
   name: String;
   attacks: Array<String>;
   value: number;
 }
 
-class Sword implements Weapon {
+export class Sword implements Weapon {
   name = "Sword";
   attacks = ["Stab", "Slash"];
   value = 50;
 }
 
-class Hammer implements Weapon {
+export class Hammer implements Weapon {
   name = "Hammer";
   attacks = ["Crush", "Smash"];
   value = 70;
 }
 
-abstract class WeaponSmith {
+export abstract class WeaponSmith {
   protected leatherAmount: number;
   protected ironAmount: number;
   protected woodAmount: number;
@@ -29,7 +29,7 @@ abstract class WeaponSmith {
     this.gold = 0;
   }
 
-  protected abstract createWeapon(): Weapon;
+  abstract createWeapon(): Weapon;
 
   public runShop() {
     let newWeapon = this.createWeapon();
@@ -58,7 +58,7 @@ export class SwordSmith extends WeaponSmith {
   constructor() {
     super();
   }
-  protected createWeapon(): Sword {
+  createWeapon(): Sword {
     this.ironAmount -= 40;
     this.leatherAmount -= 20;
 
@@ -70,7 +70,7 @@ export class HammerSmith extends WeaponSmith {
   constructor() {
     super();
   }
-  protected createWeapon(): Weapon {
+  createWeapon(): Weapon {
     this.ironAmount -= 30;
     this.woodAmount -= 20;
     this.leatherAmount -= 10;

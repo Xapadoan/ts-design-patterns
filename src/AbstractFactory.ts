@@ -4,12 +4,12 @@ enum ProtectionVariant {
   Heavy,
 }
 
-interface Helmet {
+export interface Helmet {
   name: String;
   variant: ProtectionVariant;
 }
 
-interface ChainMail {
+export interface ChainMail {
   name: String;
   variant: ProtectionVariant;
 }
